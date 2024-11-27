@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon1.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      color: #e74c3c;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #e74c3c;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    /* Title Style */
+    .page-title {
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      color: #e74c3c;
+      margin-bottom: 40px;
+    }
+
+    .experience-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .experience {
+      flex: 1;
+      min-width: 280px;
+      max-width: 30%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .experience h2 {
+      color: #2c3e50;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .experience p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .experience-video video,
+    .experience-image img {
+      width: 100%;
+      height: 200px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .experience {
+        max-width: 45%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .experience-container {
+        flex-direction: column;
+      }
+
+      .experience {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo1.jpg" alt="Logo">
+    <h1>My Portfolio</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+      <li><a href="Aboutme.html"><i class="fa fa-fw fa-user"></i> About Me</a></li>
+      <li><a href="education.html"><i class="fa fa-fw fa-graduation-cap"></i> Education</a></li>
+      <li><a href="experience.html"><i class="fa fa-fw fa-briefcase"></i> Experience</a></li>
+      <li><a href="gallery.html"><i class="fa fa-fw fa-camera"></i> Gallery</a></li>
+      <li><a href="contact.html"><i class="fa fa-fw fa-phone"></i> Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Page Title -->
+  <h1 class="page-title">My Experience!</h1>
+
+  <div class="experience-container">
+    <!-- Section 1 -->
+    <section class="experience">
+      <h2>Internship</h2>
+      <p>
+        During my Internship, I have gained the knowledge on how to communicate and experience a good working environment.
+      </p>
+      <div class="experience-image">
+        <h3>Showcase:</h3>
+        <img src="experience3.jpg" alt="Graphic Design Portfolio">
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="experience">
+      <h2>First Fight</h2>
+      <p>
+        After a whole year of training Muay Thai, at the age of 15 i experienced my first tournament. 
+      </p>
+      <div class="experience-image">
+        <h3>Showcase:</h3>
+        <img src="experience2.jpg" alt="Graphic Design Portfolio">
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="experience">
+      <h2>110KM RIDE</h2>
+      <p>
+        This has been my biggest pride and joy as a cyclist as I have finally completed a 110km ride from Desaru-Sedili Kecil-Desaru with my family.
+      </p>
+      <div class="experience-video">
+        <h3>Showcase:</h3>
+        <video autoplay loop muted controls>
+          <source src="experience-1.mp4" type="video/mp4">
+          <source src="experience-1.ogv" type="video/ogg">
+          <source src="experience-1.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon1.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #f0f8ff, #ffebcd);
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      color: #e74c3c;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      position: relative;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6347;
+    }
+
+    /* Main Content Style */
+    main {
+      padding: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .education-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .education-header h1 {
+      font-size: 50px;
+      color: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .education-header p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #777;
+      font-weight: 400;
+    }
+
+    /* Timeline and Education Items */
+    .education-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .education-item {
+      position: relative;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      width: 90%;
+      max-width: 900px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 6px solid #ff6347;
+      cursor: pointer;
+    }
+
+    .education-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .education-item h3 {
+      font-size: 28px;
+      color: #ff6347;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .education-item p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .education-item span {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .education-item img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      position: absolute;
+      left: -90px;
+      top: 30px;
+      border: 4px solid #ff6347;
+      transition: transform 0.3s ease;
+    }
+
+    .education-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .education-item .year {
+      font-weight: bold;
+      color: #333;
+      font-size: 20px;
+      position: absolute;
+      right: 20px;
+      top: 30px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .education-item {
+        width: 100%;
+      }
+
+      .education-item img {
+        left: -70px;
+        top: 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo1.jpg" alt="Logo">
+      <h1>My Portfolio</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+        <li><a href="Aboutme.html"><i class="fa fa-fw fa-user"></i> About Me</a></li>
+        <li><a href="education.html" class="active"><i class="fa fa-fw fa-graduation-cap"></i> Education</a></li>
+        <li><a href="experience.html"><i class="fa fa-fw fa-briefcase"></i> Experience</a></li>
+        <li><a href="gallery.html"><i class="fa fa-fw fa-camera"></i> Gallery</a></li>
+        <li><a href="contact.html"><i class="fa fa-fw fa-phone"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="education-header">
+      <h1>My Education</h1>
+      <p>Here is a summary of my educational background and the certifications I have completed.</p>
+    </div>
+
+    <div class="education-content">
+      <!-- Example of education item -->
+      <div class="education-item">
+        <img src="logosk.jpeg" alt="School Logo">
+        <h3>Studied at SK Taman Daya 2</h3>
+        <p><span>Sekolah Kebangsaan Taman Daya 2</span> - Graduated: 2016</p>
+        <p>During my studies, I gained the most basics education level. on 2016 i had the first big examination which is the UPSR that would be the mark of the journey in my life.</p>
+        <div class="year">2011</div>
+      </div>
+
+      <div class="education-item">
+        <img src="logosmk.jpeg" alt="SMK Logo">
+        <h3>Studied at SMK Taman Daya</h3>
+        <p><span>Sekolah Menengah Kebangsaan Taman Daya</span> - Completed: 2021</p>
+        <p>During my studies here, i gained an intermediate level of education which will lead me to the future that i had dream off. on 2021 i had my SPM examination that led me into a higher place of learning for me too gain more knowledge.</p>
+        <div class="year">2017</div>
+      </div>
+
+      <div class="education-item">
+        <img src="unilogo.jpeg" alt="Uni Logo">
+        <h3>Diploma in Information Management</h3>
+        <p><span>UiTM Segamat</span> - Completed: 2025</p>
+        <p>This course provided hands-on training in graphic design, including software like Adobe Photoshop and Illustrator. I learned about typography, layout, and color theory.</p>
+        <div class="year">2022</div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
